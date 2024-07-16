@@ -1,0 +1,81 @@
+@keyframes openBar{
+    from{
+        width: 10%;
+    }
+    to{
+        width: 28%;
+    }
+}
+
+@keyframes closeBar{
+    from{
+        width: 28%;
+    }
+    to{
+        width: 10%;
+    }
+}
+
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--color-font);
+    width: 28%;
+    height: 100%;
+}
+
+.containerSideBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 99%;
+    padding: 1em;
+}
+
+.containerSideBar p{
+    font-size: .8rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.boxLink{
+    width: 100%;
+}
+
+.boxLink ul{
+    list-style: none;
+    height: 35%;
+}
+
+.boxLink ul a{
+    text-decoration: none;
+    color: var(--color-font);
+}
+
+.boxLink ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+    height: 3rem;
+    border: solid 1px var(--color-font);
+    border-radius: .5em;
+    cursor: pointer;
+    transition: .2s;
+    overflow: hidden;
+    font-size: .9rem;
+}
+
+.boxLink ul li:hover{
+    border: none;
+    background-color: #ffffff30;
+}
+
+.boxLink ul li svg{
+    font-size: 1.1rem;
+}

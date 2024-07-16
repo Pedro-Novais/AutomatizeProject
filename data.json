@@ -1,0 +1,107 @@
+{
+    "HGGR": {
+        "name": "Automação - Cobrança",
+        "type": 1,
+        "archiveBase": "xls",
+        "status": 1
+    },
+    "LKJI": {
+        "name": "Automação - Cobrança",
+        "type": 1,
+        "archiveBase": "xls",
+        "status": "Ativo"
+    },
+    "JUYH": {
+        "name": "Automação - Cobrança",
+        "type": 2,
+        "archiveBase": "xls",
+        "status": "Ativo"
+    },
+    "HGTY": {
+        "name": "Automação - Cobrança",
+        "type": 3,
+        "archiveBase": "xls",
+        "status": "Ativo"
+    },
+
+    "automation": [
+         {
+            "id":"HGGR",
+            "name": "Automação - Cobrança",
+            "type": "Envio de email",
+            "archiveBase": "xls",
+            "dateCreated": "22/02/2022",
+            "dateValidated": "23/07/2024",
+            "lastRun": "21/04/1021",
+            "mediaRun": 14,
+            "qtyAllRun": 15,
+            "qtyErrors": 1,
+            "mediaSucess": "100%",
+            "status": "Ativo"
+        },
+        {
+            "id":"LKJI",
+            "name": "ChatBot WhatsApp",
+            "type": "ChatBot",
+            "archiveBase": null,
+            "dateCreated": "22/02/2022",
+            "dateValidated": "23/07/2024",
+            "lastRun": "21/04/1021",
+            "mediaRun": 14,
+            "qtyAllRun": 15,
+            "qtyErrors": 1,
+            "mediaSucess": "100%",
+            "status": "Ativo"
+        },
+        {
+            "id":"JUYH",
+            "name": "Automação - Teste",
+            "type": "Envio de email",
+            "archiveBase": "xls",
+            "dateCreated": "22/02/2022",
+            "dateValidated": "23/07/2024",
+            "lastRun": "21/04/1021",
+            "mediaRun": 14,
+            "qtyAllRun": 15,
+            "qtyErrors": 1,
+            "mediaSucess": "100%",
+            "status": "Ativo"
+        },
+        {
+            "id":"HGTY",
+            "name": "Automação - Nome maiorzinho",
+            "type": "Envio de email",
+            "archiveBase": "xls",
+            "dateCreated": "22/02/2022",
+            "dateValidated": "23/07/2024",
+            "lastRun": "21/04/1021",
+            "mediaRun": 14,
+            "qtyAllRun": 15,
+            "qtyErrors": 1,
+            "mediaSucess": "100%",
+            "status": "Ativo"
+        }
+    ],
+
+    "team":[
+        {
+            "id": 1,
+            "name": "Pedro teste",
+            "email": "phnovais7@gmail.com",
+            "level": "Alto",
+            "self": true
+        },
+        {
+            "id": 2,
+            "name": "teste outro",
+            "email": "teste2gmail.com",
+            "level": "Baixo"
+        },
+        {
+            "id": 3,
+            "name": "ultimo teste",
+            "email": "aoba@hotmail.com",
+            "level": "Médio"
+        }
+    ]
+}

@@ -1,0 +1,236 @@
+.containerTeam {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    border-bottom: solid 10px var(--background);
+    padding: .5em 0;
+}
+
+.tableTeams {
+    width: 80%;
+    height: 80%;
+    min-height: 50%;
+    max-height: 80%;
+    color: var(--color-font);
+    border: solid 5px var(--background);
+    border-radius: 1em;
+    background-color: var(--sub-background);
+    box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 15px;
+}
+
+.headTableTeams {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--color-font);
+    width: 100%;
+    height: 10%;
+}
+
+.contentTableTeams {
+    height: 90%;
+}
+
+.bodyTableTeams {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 15%;
+}
+
+
+.rowTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-bottom: solid 1px;
+    border-collapse: collapse;
+}
+
+.containerActionButton{
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerActionButton svg{
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.containerActionButton svg:hover{
+    color: var(--light);
+
+}
+
+.actionInfo {
+    height: 50%;
+    width: 10%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.actionInfo:hover {
+    color: var(--light);
+}
+
+.containerButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 15%;
+    margin-top: 1rem;
+}
+
+.btnTeams {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 90%;
+    border-style: none;
+    border-radius: 1em;
+    background-color: var(--sub-background);
+    color: var(--color-font);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+}
+
+.btnTeams svg{
+    height: 22px;
+    width: 22px;
+}
+
+.remove {
+    background-color: rgb(202, 72, 72);
+}
+
+.remove svg{
+    height: 16px;
+    width: 15px;
+}
+
+.containerPopupTeams{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1.4rem;
+    width: 60%;
+    height: 80%;
+}
+
+.cardPopup{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--color-font);
+    width: 100%;
+    height: 88%;
+    border-radius: 1em;
+    padding: .5em 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.titlePopupTeams{
+    border-bottom: solid 1px;
+}
+.iconBackTeams{
+    position: absolute;
+    left: 90%;
+    cursor: pointer;
+    height: 18px;
+}
+
+.boxInputsPopupTeams{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 1em;
+    width: 100%;
+    height: 60%;
+}
+
+.boxInputsPopupIntern{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 30%;
+}
+
+.boxInputsPopupIntern input{
+    width: 100%;
+    height: 70%;
+    border-radius: 1em;
+    outline: none;
+    border-style: none;
+    padding: .2em;
+    background-color: var(--sub-background);
+    color: var(--color-font);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.boxInputsPopupIntern input::placeholder{
+    color: var(--color-font);
+    opacity: .5;
+}
+
+.boxInternRadio{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.btnTeamsAddMember{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 20%;
+    margin-top: 1em;
+    border-radius: 1em;
+    border-style: none;
+    background-color: var(--sub-background);
+    color: var(--color-font);
+    font-size: .8rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 10px 14px 28px;
+    cursor: pointer;
+}
+
+.btnTeamsAddMember svg{
+    height: 22px;
+    width: 20px;
+}
+
+.popupDelete{
+    /* width: 50%; */
+    height: 50%;
+    margin-top: 5rem;
+}
+
+.boxPopupDelete{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+    margin-top: 1.5em;
+
+}

@@ -1,0 +1,131 @@
+.containerCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.titleHigh{
+    font-weight: 600;
+}
+
+.boxCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    overflow-y: auto;
+    padding: 0 1em;
+
+}
+
+.boxCards::-webkit-scrollbar {
+    height: 10px;
+    border-radius: 1em;
+}
+
+.boxCards::-webkit-scrollbar-track {
+    background-color: rgb(165, 165, 165);
+    max-width: 10px;
+    border-radius: 1em;
+}
+
+.boxCards::-webkit-scrollbar-thumb {
+    background: var(--background);
+    border-radius: 10px;
+}
+
+.containerInfoCard{
+    position: absolute;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    padding: .5em;
+    border-radius: 1em;
+    background-color: var(--background);
+    color: var(--color-font);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.containerInfoCard svg{
+    position: absolute;
+    height: 20px;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.containerInfoCard h3{
+    font-weight: 600;
+}
+
+.contentInfoCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes cardAnimation {
+    0% {
+        border-image-source: linear-gradient(0deg, var(--sub-background), var(--sub-background), var(--rose-light));
+    }
+    100% {
+        border-image-source: linear-gradient(360deg, var(--rose-light), var(--sub-background), var(--sub-background));
+    }
+  }
+
+.boxAboutCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 45%;
+    height: 90%;
+    border: solid 2px transparent;
+    border-image-slice: 1;
+    padding: .5em;
+    animation: cardAnimation 2s infinite alternate-reverse;
+}
+
+.titleBoxinfoCard{
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-weight: 450;
+    width: 100%;
+    padding: .2em 0;
+    text-align: center;
+    border-bottom: solid 1px ;
+    border-bottom-color: var(--light);
+}
+
+.infosDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 60%;
+    margin-top: 1em;
+}
+
+.boxTitleInfo{
+    display: flex;
+    flex-direction: row;
+    font-weight: 900;
+}
+
+.boxTitleInfo p{
+    font-weight: 300;
+    margin-left: 5px;
+}
