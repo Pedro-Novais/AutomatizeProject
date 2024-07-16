@@ -3,7 +3,7 @@ import "./style.css"
 function Run(){
     return (
         <div>
-            Page estatisticas
+            Page estatisticas ok
         </div>
     )
 }
