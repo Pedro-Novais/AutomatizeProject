@@ -27,7 +27,7 @@ function Header({ name }) {
                 <FaBars className="iconBar" onClick={toogleOpen}/>
                 <h2>Automatize</h2>
             </div>
-            <nav className={out ? 'navColor' : undefined} style={{animation: out && 'openNav .2s ease-in'}}>
+            <nav className={out ? 'navColor' : undefined} style={{top: out && '10px'}}>
                 <div className="boxRowInfoheader user" onClick={contentToOut}>
                     <FaRegUser />
                     <p>{name}</p>
