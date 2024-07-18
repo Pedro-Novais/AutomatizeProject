@@ -1,6 +1,8 @@
-function Support(){
+function Support() {
     return (
-        <div>Page Suporte</div>
+        <>
+            <h2 className="titleHigh">Suporte (Adicionado em breve)</h2>
+        </>
     )
 }
 

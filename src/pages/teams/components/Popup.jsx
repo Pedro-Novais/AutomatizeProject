@@ -58,11 +58,10 @@ function Popup({ popup, viewClose, dataPopup }) {
                     <FaX className="iconBackTeams" onClick={viewClose} />
                     <p className="titleHigh">Deletar membro</p>
                     <div className="boxPopupDelete">
-                        <p>Confirmar operação de deletar o usuário:</p>
                         <p>{dataPopup.name}</p>
                     </div>
 
-                    <Buttons styleButton="btnTeamsAddMember" eventBtn={() => { deleteUser('http://localhost:5000/teste') }}>
+                    <Buttons styleButton="btnTeamsAddMember" eventBtn={() => { deleteUser(url) }}>
                         <FaTrash />
                     </Buttons>
                 </Ncards>

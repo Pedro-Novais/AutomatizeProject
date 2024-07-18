@@ -1,7 +1,7 @@
 .containerTeam {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 90%;
@@ -9,126 +9,112 @@
     padding: .5em 0;
 }
 
-.tableTeams {
-    width: 80%;
-    height: 80%;
-    min-height: 50%;
-    max-height: 80%;
-    color: var(--color-font);
-    /* border: solid 5px var(--background); */
+.containerTable{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    height: 60vh;
+    overflow: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgba(0, 0, 0, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    /* border-radius: 1.2em; */
+    border-top-left-radius: 1.2em;
+    border-top-right-radius: 1.2em;
+
+}
+
+
+.containerTable::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
     border-radius: 1em;
-    background-color: var(--sub-background);
-    box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 15px;
 }
 
-.headTableTeams {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.containerTable::-webkit-scrollbar-track {
     background-color: var(--background);
+    max-width: 5px;
+    border-radius: 1em;
+}
+
+.containerTable::-webkit-scrollbar-thumb {
+    background: var(--sub-background);
+    border-radius: 10px;
+}
+
+
+.nTableTeam{
+    background-color:  var(--background);
     color: var(--color-font);
     width: 100%;
-    height: 10%;
-}
-
-.contentTableTeams {
-    height: 90%;
-}
-
-.bodyTableTeams {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    height: 15%;
-}
-
-
-.rowTable {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
-    width: 100%;
-    border-bottom: solid 1px;
     border-collapse: collapse;
 }
 
-.containerActionButton{
-    width: 35%;
-    display: flex;
-    justify-content: space-around;
+.nTableTeam thead{
+    background-color: var(--sub-background);
+    height: 10vh;
 }
 
-.containerActionButton svg{
-    height: 22px;
-    width: 22px;
-    cursor: pointer;
-    transition: .2s;
+.nTableTeam thead tr th{
+    border: solid 1px white;
 }
 
-.containerActionButton svg:hover{
-    color: var(--light);
-
+.nTableTeam tbody tr{
+    height: 10vh;
 }
 
-.actionInfo {
-    height: 50%;
-    width: 10%;
-    cursor: pointer;
-    transition: .2s;
+.nTableTeam tbody tr td{
+    border: solid 1px;
+    border-collapse: collapse;
+    text-align: center;
 }
 
-.actionInfo:hover {
-    color: var(--light);
-}
-
-.containerButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 60%;
-    height: 15%;
-    margin-top: 1rem;
-}
-
-.btnTeams {
+.containerBtnAddUser{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    height: 90%;
+    width: 90%;
+    height: 10%;
+    background-color: #4e1cd8;
+    border-bottom-left-radius: 1.2em;
+    border-bottom-right-radius: 1.2em;
     border-style: none;
-    border-radius: 1em;
-    background-color: var(--sub-background);
     color: var(--color-font);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-size: 100%;
     cursor: pointer;
+    transition: .2s;
 }
 
-.btnTeams svg{
-    height: 22px;
-    width: 22px;
+.containerBtnAddUser:hover{
+    background-color: #5432eb;
 }
 
-.remove {
-    background-color: rgb(202, 72, 72);
+.boxButtonsActions{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: auto;
 }
 
-.remove svg{
-    height: 16px;
-    width: 15px;
+.boxButtonsActions svg{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.boxButtonsActions svg:hover{
+    color: var(--light);
 }
 
 .containerPopupTeams{
     position: absolute;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding-top: 1.4rem;
+    padding-bottom: 1.5rem;
     width: 60%;
     height: 80%;
 }
@@ -152,9 +138,9 @@
 }
 .iconBackTeams{
     position: absolute;
-    left: 90%;
+    left: 93%;
     cursor: pointer;
-    height: 18px;
+    height: 15px;
 }
 
 .boxInputsPopupTeams{
@@ -204,7 +190,7 @@
     align-items: center;
     width: 80%;
     height: 20%;
-    margin-top: 1em;
+    margin-top: 2em;
     border-radius: 1em;
     border-style: none;
     background-color: var(--sub-background);
@@ -212,6 +198,7 @@
     font-size: .8rem;
     box-shadow: rgba(0, 0, 0, 0.25) 10px 14px 28px;
     cursor: pointer;
+
 }
 
 .btnTeamsAddMember svg{
@@ -221,7 +208,6 @@
 
 .popupDelete{
     height: 50%;
-    margin-top: 5rem;
 }
 
 .boxPopupDelete{
@@ -230,6 +216,6 @@
     justify-content: space-around;
     align-items: center;
     height: 30%;
-    margin-top: 1.5em;
+    margin-top: 1.1em;
 
 }

@@ -48,7 +48,7 @@ function Automations() {
             {
                 descrEnable &&
                 <div className="containerInfoCard">
-                    <FaX onClick={closeDescr} />
+                    <FaX onClick={closeDescr} /> 
                     <h3>{descrEnable.name}</h3>
                     <div className="contentInfoCard">
                         <div className="boxAboutCard">
