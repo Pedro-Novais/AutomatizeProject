@@ -15,7 +15,7 @@
     min-height: 50%;
     max-height: 80%;
     color: var(--color-font);
-    border: solid 5px var(--background);
+    /* border: solid 5px var(--background); */
     border-radius: 1em;
     background-color: var(--sub-background);
     box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 15px;
@@ -220,7 +220,6 @@
 }
 
 .popupDelete{
-    /* width: 50%; */
     height: 50%;
     margin-top: 5rem;
 }

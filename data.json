@@ -1,4 +1,62 @@
 {
+    "automation": [
+        {
+            "id": "HGGR",
+            "name": "Automação - Cobrança",
+            "type": "Envio de email",
+            "archiveBase": "xls",
+            "dateCreated": "22/02/2022",
+            "dateValidated": "23/07/2024",
+            "lastRun": "21/04/1021",
+            "mediaRun": 14,
+            "qtyAllRun": 15,
+            "qtyErrors": 1,
+            "mediaSucess": "100%",
+            "status": "Ativo"
+        },
+        {
+            "id": "LKJI",
+            "name": "ChatBot WhatsApp",
+            "type": "ChatBot",
+            "archiveBase": null,
+            "dateCreated": "22/02/2022",
+            "dateValidated": "23/07/2024",
+            "lastRun": "21/04/1021",
+            "mediaRun": 14,
+            "qtyAllRun": 15,
+            "qtyErrors": 1,
+            "mediaSucess": "100%",
+            "status": "Ativo"
+        },
+        {
+            "id": "JUYH",
+            "name": "Automação - Teste",
+            "type": "Envio de email",
+            "archiveBase": "xls",
+            "dateCreated": "22/02/2022",
+            "dateValidated": "23/07/2024",
+            "lastRun": "21/04/1021",
+            "mediaRun": 14,
+            "qtyAllRun": 15,
+            "qtyErrors": 1,
+            "mediaSucess": "100%",
+            "status": "Ativo"
+        },
+        {
+            "id": "HGTY",
+            "name": "Automação - Nome maiorzinho",
+            "type": "Envio de email",
+            "archiveBase": "xls",
+            "dateCreated": "22/02/2022",
+            "dateValidated": "23/07/2024",
+            "lastRun": "21/04/1021",
+            "mediaRun": 14,
+            "qtyAllRun": 15,
+            "qtyErrors": 1,
+            "mediaSucess": "100%",
+            "status": "Ativo"
+        }
+    ],
     "HGGR": {
         "name": "Automação - Cobrança",
         "type": 1,
@@ -23,67 +81,7 @@
         "archiveBase": "xls",
         "status": "Ativo"
     },
-
-    "automation": [
-         {
-            "id":"HGGR",
-            "name": "Automação - Cobrança",
-            "type": "Envio de email",
-            "archiveBase": "xls",
-            "dateCreated": "22/02/2022",
-            "dateValidated": "23/07/2024",
-            "lastRun": "21/04/1021",
-            "mediaRun": 14,
-            "qtyAllRun": 15,
-            "qtyErrors": 1,
-            "mediaSucess": "100%",
-            "status": "Ativo"
-        },
-        {
-            "id":"LKJI",
-            "name": "ChatBot WhatsApp",
-            "type": "ChatBot",
-            "archiveBase": null,
-            "dateCreated": "22/02/2022",
-            "dateValidated": "23/07/2024",
-            "lastRun": "21/04/1021",
-            "mediaRun": 14,
-            "qtyAllRun": 15,
-            "qtyErrors": 1,
-            "mediaSucess": "100%",
-            "status": "Ativo"
-        },
-        {
-            "id":"JUYH",
-            "name": "Automação - Teste",
-            "type": "Envio de email",
-            "archiveBase": "xls",
-            "dateCreated": "22/02/2022",
-            "dateValidated": "23/07/2024",
-            "lastRun": "21/04/1021",
-            "mediaRun": 14,
-            "qtyAllRun": 15,
-            "qtyErrors": 1,
-            "mediaSucess": "100%",
-            "status": "Ativo"
-        },
-        {
-            "id":"HGTY",
-            "name": "Automação - Nome maiorzinho",
-            "type": "Envio de email",
-            "archiveBase": "xls",
-            "dateCreated": "22/02/2022",
-            "dateValidated": "23/07/2024",
-            "lastRun": "21/04/1021",
-            "mediaRun": 14,
-            "qtyAllRun": 15,
-            "qtyErrors": 1,
-            "mediaSucess": "100%",
-            "status": "Ativo"
-        }
-    ],
-
-    "team":[
+    "team": [
         {
             "id": 1,
             "name": "Pedro teste",
@@ -103,5 +101,33 @@
             "email": "aoba@hotmail.com",
             "level": "Médio"
         }
-    ]
+    ],
+    "runningNow": {
+        "running": true,
+        "automation": null,
+        "emailSended": [
+            "phnovais7@gmail.com",
+            "teste@gmail.com",
+            "aoba@gmail.com",
+            "legal@gmail.com",
+            "olhasó@gmail.com",
+            "beleza@gmail.com"
+        ],
+        "qtySended": 14,
+        "qtyTotal": 72,
+        "infos": {
+            "name": "Automação - Cobrança",
+            "type": "Envio de email",
+            "archiveBase": "xls",
+            "dateCreated": "22/02/2022",
+            "dateValidated": "23/07/2024",
+            "lastRun": "21/04/1021",
+            "mediaRun": 14,
+            "qtyAllRun": 15,
+            "qtyErrors": 1,
+            "mediaSucess": "100%",
+            "status": "Ativo",
+            "execution": "Enviando ..."
+        }
+    }
 }

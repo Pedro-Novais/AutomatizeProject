@@ -22,7 +22,7 @@ function Teams() {
     const { data, loading, error } = getFetch("http://localhost:5000/team")
 
 
-    if (loading) {
+    if (loading) { 
         return <Loading />
     }
 
