@@ -8,7 +8,6 @@ function Section(){
         <div className="section">
             <SideBar />
             <Content>
-                <p>teste</p>
             </Content>
         </div>
     )
