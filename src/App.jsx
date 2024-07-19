@@ -8,7 +8,7 @@ function App() {
   return (
     
     <SideBarProvider>
-      <Header name={'testengebd ejbedudcwdscc'} />
+      <Header name={'Pedro Henrique'} />
       <Section />
     </SideBarProvider>
     

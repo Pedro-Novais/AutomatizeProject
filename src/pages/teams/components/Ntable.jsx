@@ -22,17 +22,22 @@ function Ntable({ infoTeam, setPopup, setDataPopup }) {
                         {
                             infoTeam.map((element, index) => (
                                 <tr key={index}>
-                                    <td>{element.name}</td>
+                                    <td style={{ textTransform: 'capitalize' }}>{element.name}</td>
                                     <td>{element.email}</td>
                                     <td>{element.level}</td>
                                     <td>
                                         <div className="boxButtonsActions">
                                             <FaInfoCircle style={{ opacity: '.4', pointerEvents: 'none' }} />
-                                            <FaTrashAlt onClick={() => {
-                                                setPopup('del')
-                                                setDataPopup(element)
-                                            }
-                                            } />
+                                            <FaTrashAlt
+                                                style={{
+                                                    opacity: element.self === true && '.4',
+                                                    pointerEvents: element.self === true && 'none'
+                                                }}
+                                                onClick={() => {
+                                                    setPopup('del')
+                                                    setDataPopup(element)
+                                                }
+                                                } />
                                         </div>
                                     </td>
                                 </tr>

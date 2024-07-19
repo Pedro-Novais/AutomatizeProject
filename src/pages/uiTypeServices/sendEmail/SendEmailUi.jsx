@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import verifyInputs from "../../../services/verifyInputs"
+import verifyInputs from "../../../services/regexEmail"
 
 import Ncards from "../../../components/cards/Ncards"
 import AttachmentFile from "../../../components/AttachmentFile"
@@ -25,8 +25,6 @@ function SendEmailUi({ data }) {
     const verifyInputData = () => {
         verifyInputs(email, password)
     }
-
-    console.log(data)
 
     return (
         <>

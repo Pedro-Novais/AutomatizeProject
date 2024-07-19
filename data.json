@@ -93,13 +93,15 @@
             "id": 2,
             "name": "teste outro",
             "email": "teste2gmail.com",
-            "level": "Baixo"
+            "level": "Baixo",
+            "self": false
         },
         {
             "id": 3,
             "name": "ultimo teste",
             "email": "aoba@hotmail.com",
-            "level": "Médio"
+            "level": "Médio",
+            "self": false
         }
     ],
     "runningNow": {

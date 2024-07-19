@@ -9,7 +9,7 @@
     padding: .5em 0;
 }
 
-.containerTable{
+.containerTable {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -43,34 +43,34 @@
 }
 
 
-.nTableTeam{
-    background-color:  var(--background);
+.nTableTeam {
+    background-color: var(--background);
     color: var(--color-font);
     width: 100%;
     height: 100%;
     border-collapse: collapse;
 }
 
-.nTableTeam thead{
+.nTableTeam thead {
     background-color: var(--sub-background);
     height: 10vh;
 }
 
-.nTableTeam thead tr th{
+.nTableTeam thead tr th {
     border: solid 1px white;
 }
 
-.nTableTeam tbody tr{
+.nTableTeam tbody tr {
     height: 10vh;
 }
 
-.nTableTeam tbody tr td{
+.nTableTeam tbody tr td {
     border: solid 1px;
     border-collapse: collapse;
     text-align: center;
 }
 
-.containerBtnAddUser{
+.containerBtnAddUser {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,28 +87,28 @@
     transition: .2s;
 }
 
-.containerBtnAddUser:hover{
+.containerBtnAddUser:hover {
     background-color: #5432eb;
 }
 
-.boxButtonsActions{
+.boxButtonsActions {
     display: flex;
     justify-content: space-around;
     width: 60%;
     margin: auto;
 }
 
-.boxButtonsActions svg{
+.boxButtonsActions svg {
     font-size: 1.2rem;
     cursor: pointer;
     transition: .1s;
 }
 
-.boxButtonsActions svg:hover{
+.boxButtonsActions svg:hover {
     color: var(--light);
 }
 
-.containerPopupTeams{
+.containerPopupTeams {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -119,7 +119,7 @@
     height: 80%;
 }
 
-.cardPopup{
+.cardPopup {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -133,17 +133,18 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.titlePopupTeams{
+.titlePopupTeams {
     border-bottom: solid 1px;
 }
-.iconBackTeams{
+
+.iconBackTeams {
     position: absolute;
     left: 93%;
     cursor: pointer;
     height: 15px;
 }
 
-.boxInputsPopupTeams{
+.boxInputsPopupTeams {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -152,70 +153,84 @@
     height: 60%;
 }
 
-.boxInputsPopupIntern{
+.boxInputsPopupIntern {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 30%;
+    min-height: 35%;
 }
 
-.boxInputsPopupIntern input{
+.boxInputsPopupIntern input {
     width: 100%;
     height: 70%;
-    border-radius: 1em;
+    border-radius: .5em;
     outline: none;
     border-style: none;
-    padding: .2em;
+    padding: .5em;
     background-color: var(--sub-background);
     color: var(--color-font);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
 }
 
-.boxInputsPopupIntern input::placeholder{
+.boxInputsPopupIntern input::placeholder {
     color: var(--color-font);
     opacity: .5;
 }
 
-.boxInternRadio{
+.boxInternRadio {
     width: 90%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 
-.btnTeamsAddMember{
+.btnTeamsAddMember {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80%;
     height: 20%;
-    margin-top: 2em;
-    border-radius: 1em;
+    margin-top: 1em;
+    border-radius: .5em;
     border-style: none;
     background-color: var(--sub-background);
     color: var(--color-font);
     font-size: .8rem;
     box-shadow: rgba(0, 0, 0, 0.25) 10px 14px 28px;
     cursor: pointer;
-
+    transition: .2s;
 }
 
-.btnTeamsAddMember svg{
+.btnTeamsAddMember:hover {
+    width: 85%;
+    background-color: #4d22c5;
+}
+
+.btnDeleteUser {
+    height: 35%;
+}
+
+.btnTeamsDisabled {
+    pointer-events: none;
+    opacity: .5;
+}
+
+.btnTeamsAddMember svg {
     height: 22px;
     width: 20px;
 }
 
-.popupDelete{
+.popupDelete {
     height: 50%;
 }
 
-.boxPopupDelete{
+.boxPopupDelete {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 30%;
     margin-top: 1.1em;
-
+    text-transform: capitalize;
 }
