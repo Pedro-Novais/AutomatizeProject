@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useContext } from "react";
-import { SideBarContext } from "../../context/SideBarContext";
+import { SideBarContext } from "../../../context/SideBarContext";
 import { FaBars } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa6";
 import { FaSignOutAlt } from "react-icons/fa";

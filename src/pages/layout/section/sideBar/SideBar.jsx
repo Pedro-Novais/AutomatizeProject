@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState, useContext, useRef } from "react"
 
-import { SideBarContext } from "../../../context/SideBarContext"
+import { SideBarContext } from "../../../../context/SideBarContext"
 
 import { GoGraph } from "react-icons/go";
 import { GrConfigure } from "react-icons/gr";
