@@ -102,6 +102,13 @@
             "email": "aoba@hotmail.com",
             "level": "Médio",
             "self": false
+        },
+        {
+            "id": 4,
+            "name": "ladt",
+            "email": "testizinho@hotmail.com",
+            "level": "Baixo",
+            "self": false
         }
     ],
     "runningNow": {
@@ -131,5 +138,8 @@
             "status": "Ativo",
             "execution": "Enviando ..."
         }
+    },
+    "stateToken":{
+        "token": true
     }
 }

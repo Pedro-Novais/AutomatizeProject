@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import App from './pages/App.jsx'
 import Login from './pages/Login.jsx'
+import NotFound from './pages/NotFound.jsx'
 import Automations from './pages/automations/Automations.jsx'
 import Project from './pages/project/Project.jsx'
 import Teams from './pages/teams/Teams.jsx'
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
     children: [
       {path: "/login", element: <Login />}
     ]
+  },
+  {
+    path: "*",
+    element: <NotFound />
   }
 ])
 
