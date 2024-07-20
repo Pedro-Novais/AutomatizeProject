@@ -31,6 +31,7 @@ function Teams() {
             try {
                 const response = await getFetch(URL.teams, setLoading)
                 setUsers(response);
+                
             } catch (error) {
                 console.error(error)
             }
@@ -52,11 +53,11 @@ function Teams() {
 
     const deleteUser = async (userId) => {
         try {
-
             const request = await deleteFetch(`${URL.teams}/${userId}`, setLoading)
 
             setUsers(users.filter(user => user.id !== userId));
             setTypePopup(false)
+
         } catch (error) {
             console.error(error)
         }
@@ -75,9 +76,9 @@ function Teams() {
                 }
             >
                 <Ntable
-                    infoTeam={users}
                     setPopup={setTypePopup}
                     setDataPopup={setUserPopup}
+                    infoTeam={users}
                 />
             </div>
             <div className="containerPopupTeams" style={{ display: typePopup ? 'flex' : 'none' }}>
@@ -86,8 +87,8 @@ function Teams() {
                         typePopup == 'add' &&
                         <PopupAdd
                             actions={actionPopup}
-                            infoUser={users}
                             addUser={addUser}
+                            infoUser={users}
                         />
                     }
 
@@ -95,8 +96,8 @@ function Teams() {
                         typePopup == 'del' &&
                         <PopupDel
                             actions={actionPopup}
-                            infoUser={userPopup}
                             cleanUser={deleteUser}
+                            infoUser={userPopup}
                         />
                     }
                 </PopupInfo>

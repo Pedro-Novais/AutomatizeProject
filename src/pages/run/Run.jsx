@@ -1,4 +1,5 @@
 import getFetch from "../../hooks/getFetch"
+import URL from "../../utils/enpoints"
 
 import AnyRun from "./components/AnyRun"
 import Running from "./components/Running"
@@ -7,13 +8,13 @@ import "./style.css"
 
 function Run() {
 
-    const { data, loading, error } = getFetch("http://localhost:5000/runningNow")
+    const { data, loading, error } = getFetch(URL.running)
 
     if (loading) {
         return <Loading />
     }
 
-    if (error) {
+    if (error) { 
         console.log(error)
         return <div>Algo de errado ocorreu</div>
     }

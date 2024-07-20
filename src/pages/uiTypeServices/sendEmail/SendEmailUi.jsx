@@ -5,10 +5,9 @@ import verifyInputs from "../../../utils/regexEmail"
 import Ncards from "../../../components/cards/Ncards"
 import AttachmentFile from "../../../components/AttachmentFile"
 import InputText from "../../../components/InputText"
-import InputChoose from "../../../components/inputRadio"
 import Buttons from "../../../components/buttons/Buttons"
 
-import { FaRegIdCard, FaPlay, FaReply } from "react-icons/fa6";
+import { FaRegIdCard, FaPlay } from "react-icons/fa6";
 import "./style.css"
 
 function SendEmailUi({ data }) {
@@ -64,16 +63,13 @@ function SendEmailUi({ data }) {
                     <p className="titleCard" style={{ fontSize: '1.2rem' }}>Detalhes do envio</p>
 
                     <div className="boxInputsInfos">
-                        <AttachmentFile styleBox="attachment" id="fileUploaded"/>
-                        {/* <InputChoose label="Deseja acompanhar o envio:" type="radio" styleBox="radios" name="detailOne"/>
-                        <InputChoose label="Em caso de erro, deseja que a automação pare?:" type="radio" styleBox="radios" name="detailOne"/> */}
-
+                        <AttachmentFile styleBox="attachment" id="fileUploaded" />
                         <div className="infoBase">
-                        <p>
-                            Ao realizar o start da sua automação, será possível acompanha-la na aba <strong>Acompanhamento</strong>,
-                            com os processos sendo atualizados em tempo real, caso haja alguma dúvida, realize contato com o nosso suporte!
+                            <p>
+                                Ao realizar o start da sua automação, será possível acompanha-la na aba <strong>Acompanhamento</strong>,
+                                com os processos sendo atualizados em tempo real, caso haja alguma dúvida, realize contato com o nosso suporte!
 
-                        </p>
+                            </p>
                         </div>
                     </div>
 

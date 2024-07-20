@@ -1,8 +1,11 @@
 import { useState } from "react"
+
+import getFetch from "../../hooks/getFetch"
+import URL from "../../utils/enpoints";
+
 import Cards from "../../components/cards/Cards"
 import Loading from "../../components/loading/Loading"
-import { FaX } from "react-icons/fa6";
-import getFetch from "../../hooks/getFetch"
+import FaX from "react-icons/fa6";
 import "./style.css"
 
 function Automations() {
@@ -16,7 +19,8 @@ function Automations() {
         setDescrEnable(false)
     }
 
-    const { data, error, loading } = getFetch("http://localhost:5000/automation")
+    const { data, error, loading } = getFetch(URL.automation)
+
     if (loading) {
         return <Loading />
     }
@@ -48,7 +52,7 @@ function Automations() {
             {
                 descrEnable &&
                 <div className="containerInfoCard">
-                    <FaX onClick={closeDescr} /> 
+                    <FaX onClick={closeDescr} />
                     <h3>{descrEnable.name}</h3>
                     <div className="contentInfoCard">
                         <div className="boxAboutCard">
