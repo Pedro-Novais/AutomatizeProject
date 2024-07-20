@@ -5,7 +5,6 @@ import { FaTrashAlt } from "react-icons/fa";
 
 
 function Ntable({ infoTeam, setPopup, setDataPopup }) {
-    console.log(infoTeam)
     return (
         <>
             <div className="containerTable">
@@ -27,7 +26,9 @@ function Ntable({ infoTeam, setPopup, setDataPopup }) {
                                     <td>{element.level}</td>
                                     <td>
                                         <div className="boxButtonsActions">
-                                            <FaInfoCircle style={{ opacity: '.4', pointerEvents: 'none' }} />
+                                            <FaInfoCircle
+                                                style={{ opacity: '.4', pointerEvents: 'none' }}
+                                            />
                                             <FaTrashAlt
                                                 style={{
                                                     opacity: element.self === true && '.4',
