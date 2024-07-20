@@ -5,9 +5,6 @@ import { FaTrash } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 
 function PopupDel({ actions, infoUser, cleanUser }) {
-    const deleteUser = (id) => {
-        cleanUser(infoUser.id)
-    }
     return (
         <Ncards styleCard="cardPopup popupDelete">
             <FaX className="iconBackTeams"

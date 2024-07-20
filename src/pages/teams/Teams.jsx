@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 
+import getFetch from "../../services/get";
 import postFetch from "../../services/post";
+import deleteFetch from "../../services/delete";
+import URL from "../../utils/enpoints";
 
 import Loading from "../../components/loading/Loading";
 import Ntable from "./components/Ntable";
@@ -11,7 +14,6 @@ import PopupInfo from "../../components/PopupInfo";
 import "./style.css"
 
 function Teams() {
-
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState(false)
     const [erro, setErro] = useState(false)
@@ -19,46 +21,45 @@ function Teams() {
     const [typePopup, setTypePopup] = useState(false)
     const [userPopup, setUserPopup] = useState([])
 
-    const fetchUsers = async () => {
-        try {
-            setLoading(true)
-            const response = await fetch("http://localhost:5000/team");
-            const data = await response.json();
-            setUsers(data);
-        } catch (error) {
-            console.error(error)
-            setErro(error)
-        } finally {
-            setLoading(false)
-        }
-    };
-
-    useEffect(() => {
-        fetchUsers()
-    }, []);
-
-    const addUser = async (data) => {
-
-        const response = await postFetch("http://localhost:5000/team", data)
-        setUsers(prevUsers => [...prevUsers, response]);
-        setTypePopup(false)
-    }
-
-    const deleteUser = async (userId) => {
-        const response = await fetch(`http://localhost:5000/team/${userId}`, {
-            method: 'DELETE'
-        })
-
-        if (!response.ok) {
-            console.error('Algum erro ocorreu')
-        }
-        setUsers(users.filter(user => user.id !== userId));
-        setTypePopup(false)
-    }
-
     const actionPopup = () => {
         setTypePopup(false)
         setUserPopup([])
+    }
+
+    useEffect(() => {
+        const getInfo = async () => {
+            try {
+                const response = await getFetch(URL.teams, setLoading)
+                setUsers(response);
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        getInfo()
+    }, [])
+
+    const addUser = async (data) => {
+        try {
+            const response = await postFetch(URL.teams, data, setLoading)
+
+            setUsers(prevUsers => [...prevUsers, response]);
+            setTypePopup(false)
+
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    const deleteUser = async (userId) => {
+        try {
+
+            const request = await deleteFetch(`${URL.teams}/${userId}`, setLoading)
+
+            setUsers(users.filter(user => user.id !== userId));
+            setTypePopup(false)
+        } catch (error) {
+            console.error(error)
+        }
     }
 
     if (loading) {
@@ -83,20 +84,20 @@ function Teams() {
                 <PopupInfo styleItem="containerPopupTeams">
                     {
                         typePopup == 'add' &&
-                            <PopupAdd
-                                actions={actionPopup}
-                                infoUser={users}
-                                addUser={addUser}
-                            />
+                        <PopupAdd
+                            actions={actionPopup}
+                            infoUser={users}
+                            addUser={addUser}
+                        />
                     }
 
                     {
                         typePopup == 'del' &&
-                            <PopupDel
-                                actions={actionPopup}
-                                infoUser={userPopup}
-                                cleanUser={deleteUser}
-                            />
+                        <PopupDel
+                            actions={actionPopup}
+                            infoUser={userPopup}
+                            cleanUser={deleteUser}
+                        />
                     }
                 </PopupInfo>
             </div>

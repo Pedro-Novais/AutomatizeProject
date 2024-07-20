@@ -1,28 +1,25 @@
-async function postFetch(url, data, setLoading){
+async function getFetch(url, setLoading) {
     try {
         setLoading(true)
         const request = await fetch(url, {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 'Content-type': 'application/json'
-            },
-            body: JSON.stringify(data)
+            }
         })
 
-        if(!request.ok){
-            console.log(request)
+        if (!request.ok) {
             console.error('Algum erro ocorreu')
         }
 
-        const response = await request.json()
-
+        const response = request.json()
         return response
 
     } catch (error) {
         console.error(error)
-    }finally{
+    } finally {
         setLoading(false)
     }
 }
 
-export default postFetch
+export default getFetch
