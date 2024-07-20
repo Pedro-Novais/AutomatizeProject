@@ -3,9 +3,10 @@ import { useState } from "react"
 import getFetch from "../../hooks/getFetch"
 import URL from "../../utils/enpoints";
 
+import Popup from "../../components/popupGlobal/Popup";
 import Cards from "../../components/cards/Cards"
 import Loading from "../../components/loading/Loading"
-import FaX from "react-icons/fa6";
+import { FaX } from "react-icons/fa6";
 import "./style.css"
 
 function Automations() {

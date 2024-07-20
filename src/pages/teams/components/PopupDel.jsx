@@ -17,7 +17,7 @@ function PopupDel({ actions, infoUser, cleanUser }) {
 
             <Buttons styleButton="btnTeamsAddMember btnDeleteUser"
                 eventBtn={() => {
-                    cleanUser(infoUser.id)
+                    cleanUser(infoUser.id, infoUser.name)
                 }}
             >
                 <FaTrash />

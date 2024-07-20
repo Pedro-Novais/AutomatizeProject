@@ -1,0 +1,13 @@
+.popupGlobal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1%;
+    width: 30%;
+    min-height: 8%;
+    padding: .5em;
+    border-radius: .2em;
+    color: var(--color-font);
+}

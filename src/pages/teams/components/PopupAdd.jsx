@@ -8,7 +8,7 @@ import InputText from "../../../components/InputText";
 
 import { FaX } from "react-icons/fa6";
 
-function PopupAdd({ actions, addUser, infoUser }) {
+function PopupAdd({ actions, addUser, infoToUser }) {
     const [email, setEmail] = useState("")
     const [name, setName] = useState("")
 
@@ -23,7 +23,7 @@ function PopupAdd({ actions, addUser, infoUser }) {
     const btnVerifyCredentials = () => {
 
         if (!validateEmail(email)) {
-            console.log('email incorreto')
+            infoToUser('Email digitado não é valído!', 'error')
             return false
         }
 

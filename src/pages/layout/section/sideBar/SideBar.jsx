@@ -17,7 +17,6 @@ function SideBar() {
 
     const closeBar = () => {
         if (!open) {
-            // elementRef.current.style.display = 'none'
             elementRef.current.style.width = '10%'
         }
     }

@@ -1,10 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+
+import { PopupGlobalContext } from "../../context/PopupGlobalContext";
 
 import getFetch from "../../services/get";
 import postFetch from "../../services/post";
 import deleteFetch from "../../services/delete";
 import URL from "../../utils/enpoints";
+import controllerPopup from "../../services/controllerPopup";
 
+import Popup from "../../components/popupGlobal/Popup";
 import Loading from "../../components/loading/Loading";
 import Ntable from "./components/Ntable";
 import PopupAdd from "./components/PopupAdd";
@@ -14,6 +18,8 @@ import PopupInfo from "../../components/PopupInfo";
 import "./style.css"
 
 function Teams() {
+    const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
+
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState(false)
     const [erro, setErro] = useState(false)
@@ -26,12 +32,16 @@ function Teams() {
         setUserPopup([])
     }
 
+    const viewPopupGlobal = (msg, type) => {
+        controllerPopup(msg, type, toogleActive, toogleMessage, toogleType)
+    }
+
     useEffect(() => {
         const getInfo = async () => {
             try {
                 const response = await getFetch(URL.teams, setLoading)
                 setUsers(response);
-                
+
             } catch (error) {
                 console.error(error)
             }
@@ -46,17 +56,21 @@ function Teams() {
             setUsers(prevUsers => [...prevUsers, response]);
             setTypePopup(false)
 
+            controllerPopup(`Email de confirmação enviado para ${data.email}`, toogleActive, toogleMessage)
+
         } catch (error) {
             console.error(error)
         }
     }
 
-    const deleteUser = async (userId) => {
+    const deleteUser = async (userId, userName) => {
         try {
             const request = await deleteFetch(`${URL.teams}/${userId}`, setLoading)
 
             setUsers(users.filter(user => user.id !== userId));
             setTypePopup(false)
+
+            viewPopupGlobal(`Usuário ${userName}, deletado com sucesso!`, 'info')
 
         } catch (error) {
             console.error(error)
@@ -89,6 +103,7 @@ function Teams() {
                             actions={actionPopup}
                             addUser={addUser}
                             infoUser={users}
+                            infoToUser={viewPopupGlobal}
                         />
                     }
 
@@ -102,6 +117,7 @@ function Teams() {
                     }
                 </PopupInfo>
             </div>
+            <Popup />
         </>
     )
 }
