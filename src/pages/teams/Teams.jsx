@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import postFetch from "../../services/post";
+
 import Loading from "../../components/loading/Loading";
 import Ntable from "./components/Ntable";
 import PopupAdd from "./components/PopupAdd";
@@ -34,6 +36,13 @@ function Teams() {
     useEffect(() => {
         fetchUsers()
     }, []);
+
+    const addUser = async (data) => {
+
+        const response = await postFetch("http://localhost:5000/team", data)
+        setUsers(prevUsers => [...prevUsers, response]);
+        setTypePopup(false)
+    }
 
     const deleteUser = async (userId) => {
         const response = await fetch(`http://localhost:5000/team/${userId}`, {
@@ -76,7 +85,8 @@ function Teams() {
                         typePopup == 'add' &&
                             <PopupAdd
                                 actions={actionPopup}
-                                infoUser={userPopup}
+                                infoUser={users}
+                                addUser={addUser}
                             />
                     }
 

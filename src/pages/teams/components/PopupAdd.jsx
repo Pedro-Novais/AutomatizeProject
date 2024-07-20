@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import validateEmail from "../../../services/regexEmail";
+import validateEmail from "../../../utils/regexEmail";
 
 import Buttons from "../../../components/buttons/Buttons";
 import Ncards from "../../../components/cards/Ncards";
@@ -8,8 +8,7 @@ import InputText from "../../../components/InputText";
 
 import { FaX } from "react-icons/fa6";
 
-function PopupAdd({ actions }) {
-
+function PopupAdd({ actions, addUser, infoUser }) {
     const [email, setEmail] = useState("")
     const [name, setName] = useState("")
 
@@ -28,8 +27,14 @@ function PopupAdd({ actions }) {
             return false
         }
 
-        console.log('Requisição relalizada com sucesso')
-        return true
+        const data = {
+            name: name,
+            email: email,
+            level: "Low",
+            self: false
+        }
+
+        addUser(data)
     }
 
     return (

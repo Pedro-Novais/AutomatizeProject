@@ -6,7 +6,7 @@ import { FaX } from "react-icons/fa6";
 
 function PopupDel({ actions, infoUser, cleanUser }) {
     const deleteUser = (id) => {
-        cleanUser(id)
+        cleanUser(infoUser.id)
     }
     return (
         <Ncards styleCard="cardPopup popupDelete">
@@ -20,7 +20,7 @@ function PopupDel({ actions, infoUser, cleanUser }) {
 
             <Buttons styleButton="btnTeamsAddMember btnDeleteUser"
                 eventBtn={() => {
-                    deleteUser(`http://localhost:5000/team/${infoUser.id}`, infoUser.id)
+                    cleanUser(infoUser.id)
                 }}
             >
                 <FaTrash />

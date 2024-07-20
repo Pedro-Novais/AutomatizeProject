@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import verifyInputs from "../../../services/regexEmail"
+import verifyInputs from "../../../utils/regexEmail"
 
 import Ncards from "../../../components/cards/Ncards"
 import AttachmentFile from "../../../components/AttachmentFile"
