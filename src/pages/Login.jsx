@@ -1,8 +1,11 @@
+import { PopupGlobalProvider } from "../context/PopupGlobalContext"
 import ContainerLogin from "./login/ContainerLogin"
 
-function Login(){
+function Login() {
     return (
-        <ContainerLogin />
+        <PopupGlobalProvider>
+            <ContainerLogin />
+        </PopupGlobalProvider>
     )
 }
 

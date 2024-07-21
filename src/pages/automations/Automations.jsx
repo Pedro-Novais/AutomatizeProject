@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 
+import { PopupGlobalContext } from "../../context/PopupGlobalContext";
 import getFetch from "../../hooks/getFetch"
+import controllerPopup from "../../services/controllerPopup";
 import URL from "../../utils/enpoints";
 
-import Popup from "../../components/popupGlobal/Popup";
 import Cards from "../../components/cards/Cards"
 import Loading from "../../components/loading/Loading"
 import { FaX } from "react-icons/fa6";
@@ -11,6 +12,7 @@ import "./style.css"
 
 function Automations() {
 
+    const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
     const [descrEnable, setDescrEnable] = useState(false)
 
     const openDescr = (info) => {
@@ -26,7 +28,7 @@ function Automations() {
         return <Loading />
     }
     if (error) {
-        return <div>erro {error}</div>
+        return <div>erro</div>
     }
 
     return (

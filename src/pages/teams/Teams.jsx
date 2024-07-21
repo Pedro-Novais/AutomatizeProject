@@ -56,7 +56,7 @@ function Teams() {
             setUsers(prevUsers => [...prevUsers, response]);
             setTypePopup(false)
 
-            controllerPopup(`Email de confirmação enviado para ${data.email}`, toogleActive, toogleMessage)
+            viewPopupGlobal(`Email de confirmação enviado para ${data.email}`, 'info')
 
         } catch (error) {
             console.error(error)

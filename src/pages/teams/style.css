@@ -191,7 +191,7 @@
     width: 80%;
     height: 20%;
     margin-top: 1em;
-    border-radius: .5em;
+    border-radius: 1em;
     border-style: none;
     background-color: var(--sub-background);
     color: var(--color-font);
