@@ -19,7 +19,6 @@ import "./style.css"
 
 function Teams() {
     const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
-    toogleActive(false)
 
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState(false)

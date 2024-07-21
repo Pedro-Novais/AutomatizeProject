@@ -15,7 +15,6 @@ import "./style.css"
 
 function Project() {
     const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
-    toogleActive(false)
 
     const { id } = useParams()
     const navigate = useNavigate()

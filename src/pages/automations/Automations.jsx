@@ -15,7 +15,6 @@ import { BiBorderBottom } from "react-icons/bi";
 
 function Automations() {
     const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
-    toogleActive(false)
 
     const [descrEnable, setDescrEnable] = useState(false)
 

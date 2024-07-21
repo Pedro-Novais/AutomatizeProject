@@ -14,7 +14,6 @@ import "./style.css"
 
 function Run() {
     const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
-    toogleActive(false)
 
     const { data, loading, error } = getFetch(URL.running)
 
