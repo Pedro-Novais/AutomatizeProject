@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
 import { FaPlay } from "react-icons/fa6";
-import { FaRegClipboard } from "react-icons/fa6";
+import { FaRegClipboard } from "react-icons/fa6"; 
 
 import Buttons from "../buttons/Buttons";
 import "./style.css"
 
-function Cards({ data, enableDescri}) {
+function Cards({ data, enableDescri, moreSize}) {
 
     const navigate = useNavigate()
 
@@ -19,7 +19,7 @@ function Cards({ data, enableDescri}) {
     }
 
     return (
-        <div className="card">
+        <div className="card" style={{width: moreSize && '50%'}}>
             <p className="titleCard">{data.name}</p>
             <div className="contentCardintern">
                 <p className="lineCard">Status: Ativo</p>

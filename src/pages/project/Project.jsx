@@ -14,12 +14,13 @@ import Loading from "../../components/loading/Loading"
 import "./style.css"
 
 function Project() {
+    const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
+    toogleActive(false)
+
     const { id } = useParams()
     const navigate = useNavigate()
 
     const { data, loading, error } = getFetch(`${URL.project}/${id}`)
-
-    const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
 
     const viewPopupGlobal = (msg, type) => {
         controllerPopup(msg, type, toogleActive, toogleMessage, toogleType)

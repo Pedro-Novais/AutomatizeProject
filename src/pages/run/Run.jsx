@@ -13,10 +13,10 @@ import Loading from "../../components/loading/Loading"
 import "./style.css"
 
 function Run() {
-    const { data, loading, error } = getFetch(URL.running)
-
-
     const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
+    toogleActive(false)
+
+    const { data, loading, error } = getFetch(URL.running)
 
     const viewPopupGlobal = (msg, type) => {
         controllerPopup(msg, type, toogleActive, toogleMessage, toogleType)
@@ -38,6 +38,7 @@ function Run() {
             <div className="containerRun">
                 {data.running ? <Running emails={data} /> : <AnyRun />}
             </div>
+            <Popup />
         </>
     )
 }

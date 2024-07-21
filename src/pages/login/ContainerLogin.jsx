@@ -14,6 +14,7 @@ import "./style.css"
 
 function ContainerLogin() {
     const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
+    toogleActive(false)
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')

@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 90%;
+    color: var(--background);
 }
 
 .titleHigh{
@@ -16,7 +17,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 90%;
+    height: 100%;
     width: 100%;
     overflow-y: auto;
     padding: 0 1em;

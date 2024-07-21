@@ -11,10 +11,11 @@ import Cards from "../../components/cards/Cards"
 import Loading from "../../components/loading/Loading"
 import { FaX } from "react-icons/fa6";
 import "./style.css"
+import { BiBorderBottom } from "react-icons/bi";
 
 function Automations() {
-
     const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
+    toogleActive(false)
 
     const [descrEnable, setDescrEnable] = useState(false)
 
@@ -44,7 +45,7 @@ function Automations() {
         <>
             <h2 className="titleHigh">Automações</h2>
             <div className="containerCards"
-                style={{ opacity: descrEnable && '.5', pointerEvents: descrEnable && 'none' }}
+                style={{ opacity: descrEnable && '.5', pointerEvents: descrEnable && 'none', borderBottom: data.length < 3 && 'solid 10px' }}
             >
                 <div className="boxCards"
                     style={{ justifyContent: data.length > 3 && 'flex-start' }}
@@ -55,6 +56,7 @@ function Automations() {
                                 key={index}
                                 data={element}
                                 enableDescri={openDescr}
+                                moreSize={data.length < 3 && true}
                             />
                         ))
                     }
