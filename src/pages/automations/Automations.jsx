@@ -1,10 +1,12 @@
 import { useState, useContext } from "react"
 
 import { PopupGlobalContext } from "../../context/PopupGlobalContext";
+
 import getFetch from "../../hooks/getFetch"
 import controllerPopup from "../../services/controllerPopup";
 import URL from "../../utils/enpoints";
 
+import Popup from "../../components/popupGlobal/Popup";
 import Cards from "../../components/cards/Cards"
 import Loading from "../../components/loading/Loading"
 import { FaX } from "react-icons/fa6";
@@ -13,7 +15,10 @@ import "./style.css"
 function Automations() {
 
     const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)
+
     const [descrEnable, setDescrEnable] = useState(false)
+
+    const { data, error, loading } = getFetch(URL.automation)
 
     const openDescr = (info) => {
         setDescrEnable(info)
@@ -22,13 +27,17 @@ function Automations() {
         setDescrEnable(false)
     }
 
-    const { data, error, loading } = getFetch(URL.automation)
+    const viewPopupGlobal = (msg, type) => {
+        controllerPopup(msg, type, toogleActive, toogleMessage, toogleType)
+    }
 
     if (loading) {
         return <Loading />
     }
     if (error) {
-        return <div>erro</div>
+
+        viewPopupGlobal('Algum erro desconhcido ocorreu ao carregar suas automações!', 'error')
+        return <> <div>erro</div> <Popup /></>
     }
 
     return (

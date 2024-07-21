@@ -1,9 +1,12 @@
-import { useState, useRef } from "react";
-import { useContext } from "react";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { SideBarContext } from "../../../context/SideBarContext";
+
 import { FaBars } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa6";
 import { FaSignOutAlt } from "react-icons/fa";
+import { GrUpdate } from "react-icons/gr";
+
 import "./style.css"
 
 function Header({ name }) {
@@ -13,12 +16,18 @@ function Header({ name }) {
     name = name || "Nome Padrão"
     const [out, setOut] = useState(false)
 
+    const navigate = useNavigate()
+    
     const contentToOut = () => {
         setOut(!out)
     }
 
+    const switchPassword = () => {
+        console.log('trocar senha')
+    }
+
     const signOut = () => { 
-        console.log('saindo')
+        navigate('/login')
     }
 
     return (
@@ -31,6 +40,10 @@ function Header({ name }) {
                 <div className="boxRowInfoheader user" onClick={contentToOut}>
                     <FaRegUser />
                     <p>{name}</p>
+                </div>
+                <div className="boxRowInfoheader user signOut" onClick={switchPassword} style={{ display: out && 'flex' }}>
+                    <GrUpdate />
+                    <p>Trocar senha</p>
                 </div>
                 <div className="boxRowInfoheader user signOut" onClick={signOut} style={{ display: out && 'flex' }}>
                     <FaSignOutAlt />
