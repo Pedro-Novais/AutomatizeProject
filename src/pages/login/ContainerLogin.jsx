@@ -6,6 +6,7 @@ import postFetch from "../../services/post";
 import URL from "../../utils/enpoints";
 import controllerPopup from "../../services/controllerPopup";
 
+import Loading from "../../components/loading/Loading";
 import validateEmail from "../../utils/regexEmail";
 import Popup from "../../components/popupGlobal/Popup"
 import InputText from "../../components/InputText"
@@ -17,6 +18,8 @@ function ContainerLogin() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    const [loading, setLoading] = useState(false)
 
     const navigate = useNavigate()
 
@@ -48,10 +51,26 @@ function ContainerLogin() {
     }
 
     const makeLogin = async (data) => {
-        // const request = await postFetch(URL.login, data)
+        const response = await postFetch(URL.login, data, setLoading)
 
+        if (!response.ok) {
+            if (response.status == 404) {
+                viewPopupGlobal('Credenciais Inválidas!', 'error')
+                return false
+            }
+            else if (response.status == 500) {
+                viewPopupGlobal('Algum erro desconhecido ocorreu!', 'error')
+                return false
+            }
+        }
+
+        localStorage.setItem('token', response.token)
         viewPopupGlobal('Login realizado com sucesso!', 'info')
-        navigate('/automations')
+        setTimeout(() => navigate('/automations'), 1000)
+    }
+
+    if (loading) {
+        return <Loading />
     }
 
     return (

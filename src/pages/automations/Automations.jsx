@@ -11,7 +11,6 @@ import Cards from "../../components/cards/Cards"
 import Loading from "../../components/loading/Loading"
 import { FaX } from "react-icons/fa6";
 import "./style.css"
-import { BiBorderBottom } from "react-icons/bi";
 
 function Automations() {
     const { toogleActive, toogleMessage, toogleType } = useContext(PopupGlobalContext)

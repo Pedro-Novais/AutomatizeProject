@@ -26,7 +26,8 @@ function Header({ name }) {
         console.log('trocar senha')
     }
 
-    const signOut = () => { 
+    const signOut = () => {
+        localStorage.clear('token')
         navigate('/login')
     }
 

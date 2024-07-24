@@ -1,4 +1,4 @@
-async function postFetch(url, data, setLoading){
+async function postFetch(url, data, setLoading) {
     try {
         setLoading(true)
         const request = await fetch(url, {
@@ -9,18 +9,21 @@ async function postFetch(url, data, setLoading){
             body: JSON.stringify(data)
         })
 
-        if(!request.ok){
-            console.log(request)
-            console.error('Algum erro ocorreu')
-        }
-
         const response = await request.json()
 
-        return response
+        // if (!request.ok) {
+        //     if (request.status == 404 || response.status == 400) {
+        //         return { response, msg: 'Credenciais inválidas!', status: response.status, ok: false }
+        //     }
+        //     console.error('Algum erro ocorreu')
+        //     return { response, msg: 'Algum erro desconhecido ocorreu!', status: 500, ok: false }
+        // }
+
+        return { response, status: request.status, ok: request.ok }
 
     } catch (error) {
         console.error(error)
-    }finally{
+    } finally {
         setLoading(false)
     }
 }
