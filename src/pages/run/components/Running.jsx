@@ -25,8 +25,8 @@ function Running({ emails }) {
                 <h3>Emails enviado</h3>
                 <div className="contentBoxInfoAutomation emailSend">
                     {
-                        email.map(element => (
-                            <LabelInfo label={'Enviado'} info={element} addStyle={"emailSendedText"} />
+                        email.map((element, index) => (
+                            <LabelInfo key={index} label={'Enviado'} info={element} addStyle={"emailSendedText"} />
                         ))
                     }
                 </div>

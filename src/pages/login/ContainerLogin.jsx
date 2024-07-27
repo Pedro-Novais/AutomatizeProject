@@ -52,7 +52,7 @@ function ContainerLogin() {
 
     const makeLogin = async (data) => {
         const response = await postFetch(URL.login, data, setLoading)
-
+        console.log(response)
         if (!response.ok) {
             if (response.status == 404) {
                 viewPopupGlobal('Credenciais Inválidas!', 'error')
@@ -64,7 +64,7 @@ function ContainerLogin() {
             }
         }
 
-        localStorage.setItem('token', response.token)
+        localStorage.setItem('token', response.response.token)
         viewPopupGlobal('Login realizado com sucesso!', 'info')
         setTimeout(() => navigate('/automations'), 1000)
     }
